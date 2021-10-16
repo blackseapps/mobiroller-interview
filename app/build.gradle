@@ -3,23 +3,33 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.blackseapps.interview"
-        minSdkVersion 21
-        targetSdkVersion 31
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"http://backend.mertkaradeniz.com/v1/mobile/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "LICENSE_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7/QW0jT9AORi5alUHUp0ktUGgTDeGheBAW6E3ctAA/p6z/YJ+U1uzOgG++QfMWiXZrMIGAvoee3wuY0W6I7DIT76cK8aiyaECKz8AeyRT0uw25u7PBojJ0upTxsUVlnXD9h13QXSK1p/017v5UalFsuifSHCPlSlrvruIPRAK18HyrfwxKS4K1o+7rk6iWOBqqgmhxzrwkbJC48Na7k8o0DqxwhsEiZIZYTXEGdQyKYaS6zecNLJqV1gO4QHy35bJtnBqSlKiJ5CM6e4g5AfpL5as3t3JT6FIVNcMLK+i7qPt+d3GeyT6/DfpbAQyXq20qgBYgcd2qo0Cpk5QpmnJQIDAQAB\"")
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"http://backend.mertkaradeniz.com/v1/mobile/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "LICENSE_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7/QW0jT9AORi5alUHUp0ktUGgTDeGheBAW6E3ctAA/p6z/YJ+U1uzOgG++QfMWiXZrMIGAvoee3wuY0W6I7DIT76cK8aiyaECKz8AeyRT0uw25u7PBojJ0upTxsUVlnXD9h13QXSK1p/017v5UalFsuifSHCPlSlrvruIPRAK18HyrfwxKS4K1o+7rk6iWOBqqgmhxzrwkbJC48Na7k8o0DqxwhsEiZIZYTXEGdQyKYaS6zecNLJqV1gO4QHy35bJtnBqSlKiJ5CM6e4g5AfpL5as3t3JT6FIVNcMLK+i7qPt+d3GeyT6/DfpbAQyXq20qgBYgcd2qo0Cpk5QpmnJQIDAQAB\"")
+
         }
     }
     compileOptions {
@@ -32,7 +42,42 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Firebase
+    implementation platform("com.google.firebase:firebase-bom:${rootProject.ext.firebaseBom}")
+    //Firebase Database
+    implementation "com.google.firebase:firebase-database"
+    
+    //Dagger 2 (Dependency Injection)
+    implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
+
+    //Reactive
+    //noinspection GradleDependency
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2Version}"
+    //noinspection GradleDependency
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidVersion}"
+
+    //Parser
+    //noinspection GradleDependency
+    implementation "com.google.code.gson:gson:${rootProject.ext.gsonVersion}"
+
+    //Network
+    //noinspection GradleDependency
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
+    //noinspection GradleDependency
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
+
+
+    //Image
+    //noinspection GradleDependency
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+
+    //Code generator for view
+    //noinspection GradleDependency
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
 }
