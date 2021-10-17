@@ -2,11 +2,10 @@ package com.blackseapps.interview.ui.main;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.blackseapps.interview.R;
+import com.blackseapps.interview.ui.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
     @Override

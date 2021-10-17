@@ -1,6 +1,7 @@
 package com.blackseapps.interview.ui.fragment.adding;
 
-import androidx.fragment.app.Fragment;
 
-public class AddingFragment extends Fragment {
+import com.blackseapps.interview.ui.base.BaseFragment;
+
+public class AddingFragment extends BaseFragment {
 }
