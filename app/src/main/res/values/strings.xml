@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MobirollerInterview</string>
+
+    <!-- In App Texts -->
+    <string name="product_button_text">Kaydet</string>
+    <string name="product_name_text">Product Name</string>
+    <string name="stock_total_text">Stock Total</string>
+    <string name="product_price_text">Product Price</string>
+    <string name="product_image_text">Product Image</string>
+    <string name="product_description_text">Product Description</string>
+    <string name="product_button_delete">Delete</string>
+    <string name="product_button_update">Update</string>
 </resources>

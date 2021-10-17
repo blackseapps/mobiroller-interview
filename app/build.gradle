@@ -19,16 +19,11 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"http://backend.mertkaradeniz.com/v1/mobile/\"")
-            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
-            buildConfigField("String", "LICENSE_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7/QW0jT9AORi5alUHUp0ktUGgTDeGheBAW6E3ctAA/p6z/YJ+U1uzOgG++QfMWiXZrMIGAvoee3wuY0W6I7DIT76cK8aiyaECKz8AeyRT0uw25u7PBojJ0upTxsUVlnXD9h13QXSK1p/017v5UalFsuifSHCPlSlrvruIPRAK18HyrfwxKS4K1o+7rk6iWOBqqgmhxzrwkbJC48Na7k8o0DqxwhsEiZIZYTXEGdQyKYaS6zecNLJqV1gO4QHy35bJtnBqSlKiJ5CM6e4g5AfpL5as3t3JT6FIVNcMLK+i7qPt+d3GeyT6/DfpbAQyXq20qgBYgcd2qo0Cpk5QpmnJQIDAQAB\"")
-        }
+          
+            }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "BASE_URL", "\"http://backend.mertkaradeniz.com/v1/mobile/\"")
-            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
-            buildConfigField("String", "LICENSE_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7/QW0jT9AORi5alUHUp0ktUGgTDeGheBAW6E3ctAA/p6z/YJ+U1uzOgG++QfMWiXZrMIGAvoee3wuY0W6I7DIT76cK8aiyaECKz8AeyRT0uw25u7PBojJ0upTxsUVlnXD9h13QXSK1p/017v5UalFsuifSHCPlSlrvruIPRAK18HyrfwxKS4K1o+7rk6iWOBqqgmhxzrwkbJC48Na7k8o0DqxwhsEiZIZYTXEGdQyKYaS6zecNLJqV1gO4QHy35bJtnBqSlKiJ5CM6e4g5AfpL5as3t3JT6FIVNcMLK+i7qPt+d3GeyT6/DfpbAQyXq20qgBYgcd2qo0Cpk5QpmnJQIDAQAB\"")
 
         }
     }
@@ -50,7 +45,7 @@ dependencies {
     implementation platform("com.google.firebase:firebase-bom:${rootProject.ext.firebaseBom}")
     //Firebase Database
     implementation "com.google.firebase:firebase-database"
-    
+
     //Dagger 2 (Dependency Injection)
     implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
     annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
