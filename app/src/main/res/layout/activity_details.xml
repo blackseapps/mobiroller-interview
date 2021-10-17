@@ -38,7 +38,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/product_price_text"
-                android:textColor="@color/text_color"
+                android:textColor="@color/red_ribbon"
                 android:textStyle="bold"
                 tools:ignore="RtlHardcoded" />
         </LinearLayout>

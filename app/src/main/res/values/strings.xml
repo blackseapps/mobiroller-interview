@@ -10,4 +10,10 @@
     <string name="product_description_text">Product Description</string>
     <string name="product_button_delete">Delete</string>
     <string name="product_button_update">Update</string>
+    <string name="title_activity_main2">MainActivity</string>
+
+    <!-- Bottom Navigation -->
+    <string name="title_home">Products</string>
+    <string name="title_dashboard">Add</string>
+
 </resources>
