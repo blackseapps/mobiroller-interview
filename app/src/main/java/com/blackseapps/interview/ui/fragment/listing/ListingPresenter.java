@@ -11,6 +11,7 @@ import com.blackseapps.interview.ui.base.BasePresenter;
 public class ListingPresenter<V extends ListingMvpView> extends BasePresenter<V>
         implements ListingMvpPresenter<V> {
 
+
     @Override
     public void onViewPrepared() {
 

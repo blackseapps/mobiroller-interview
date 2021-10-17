@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "93118426512",
+    "firebase_url": "https://mobiroller-b444b-default-rtdb.firebaseio.com",
+    "project_id": "mobiroller-b444b",
+    "storage_bucket": "mobiroller-b444b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93118426512:android:6699bf3d59714645b5d715",
+        "android_client_info": {
+          "package_name": "com.blackseapps.interview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93118426512-1hr9dkbd0ln07pi8tpu0l5m956qi3idv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCypEgPZv7Kg9dZiZieXNiEIEyObOiDmQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93118426512-1hr9dkbd0ln07pi8tpu0l5m956qi3idv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

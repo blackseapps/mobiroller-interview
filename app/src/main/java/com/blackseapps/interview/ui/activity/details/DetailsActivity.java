@@ -11,4 +11,8 @@ import com.blackseapps.interview.ui.base.BaseActivity;
 public class DetailsActivity  extends BaseActivity {
 
 
+    @Override
+    protected void setUp() {
+
+    }
 }

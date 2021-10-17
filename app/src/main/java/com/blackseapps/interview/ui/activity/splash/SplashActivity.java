@@ -9,4 +9,9 @@ import com.blackseapps.interview.ui.base.BaseActivity;
  */
 
 public class SplashActivity extends BaseActivity {
+
+    @Override
+    protected void setUp() {
+
+    }
 }

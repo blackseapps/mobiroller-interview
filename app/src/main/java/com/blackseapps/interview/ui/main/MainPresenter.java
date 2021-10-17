@@ -4,6 +4,8 @@ import com.blackseapps.interview.ui.base.BasePresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
 
+import javax.inject.Inject;
+
 /**
  * Created by mertKaradeniz on 17.10.2021
  * <p>
@@ -13,4 +15,18 @@ import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
 public class MainPresenter<V extends MainMvpView> extends BasePresenter<V>
         implements MainMvpPresenter<V> {
 
+    @Inject
+    public MainPresenter(){
+
+    }
+
+    @Override
+    public void onOpenAddingFragment() {
+        getMvpView().showAddingFragment();
+    }
+
+    @Override
+    public void onOpenListingFragment() {
+        getMvpView().showListingFragment();
+    }
 }

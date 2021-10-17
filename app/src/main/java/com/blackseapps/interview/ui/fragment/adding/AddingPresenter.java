@@ -8,9 +8,15 @@ package com.blackseapps.interview.ui.fragment.adding;
 
 import com.blackseapps.interview.ui.base.BasePresenter;
 
+import javax.inject.Inject;
+
 public class AddingPresenter<V extends AddingMvpView> extends BasePresenter<V>
         implements AddingMvpPresenter<V> {
 
+    @Inject
+    public AddingPresenter() {
+
+    }
 
     @Override
     public void onViewPrepared() {
