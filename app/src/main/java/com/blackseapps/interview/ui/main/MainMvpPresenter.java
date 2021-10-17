@@ -11,4 +11,8 @@ import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
 
 public interface MainMvpPresenter<V extends MainMvpView> extends BaseMvpPresenter<V> {
 
+    void onOpenAddingFragment();
+
+    void onOpenListingFragment();
+
 }

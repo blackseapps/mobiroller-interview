@@ -1,8 +1,10 @@
 package com.blackseapps.interview.ui.base;
 
+import android.view.View;
+
 import androidx.fragment.app.Fragment;
 
-public class BaseFragment extends Fragment implements BaseMvpView{
+public abstract class BaseFragment extends Fragment implements BaseMvpView{
 
     @Override
     public void showLoading() {
@@ -55,4 +57,7 @@ public class BaseFragment extends Fragment implements BaseMvpView{
 
         void onFragmentDetached(String tag);
     }
+
+    protected abstract void setUp(View view);
+
 }

@@ -13,7 +13,7 @@
 
         <activity
             android:name=".ui.main.MainActivity"
-            android:label="@string/title_activity_main2">
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

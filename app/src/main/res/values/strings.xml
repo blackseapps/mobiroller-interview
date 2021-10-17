@@ -10,10 +10,14 @@
     <string name="product_description_text">Product Description</string>
     <string name="product_button_delete">Delete</string>
     <string name="product_button_update">Update</string>
-    <string name="title_activity_main2">MainActivity</string>
+    <string name="stock_code_text">Stock Code</string>
 
     <!-- Bottom Navigation -->
     <string name="title_home">Products</string>
     <string name="title_dashboard">Add</string>
+    <string name="brand_name_text">Brand Name</string>
+
+    <!-- Activity Names-->
+    <string name="title_activity_main">sanaBi</string>
 
 </resources>

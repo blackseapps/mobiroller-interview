@@ -1,8 +1,36 @@
 package com.blackseapps.interview.ui.base;
 
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BaseActivity extends AppCompatActivity implements BaseMvpView , BaseFragment.Callback {
+import com.blackseapps.interview.MainApplication;
+import com.blackseapps.interview.di.component.ActivityComponent;
+import com.blackseapps.interview.di.component.DaggerActivityComponent;
+import com.blackseapps.interview.di.module.ActivityModule;
+
+import butterknife.Unbinder;
+
+public abstract class BaseActivity extends AppCompatActivity implements BaseMvpView, BaseFragment.Callback {
+
+    private Unbinder mUnBinder;
+
+    private ActivityComponent mActivityComponent;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mActivityComponent = DaggerActivityComponent.builder()
+                .activityModule(new ActivityModule(this))
+                .applicationComponent(((MainApplication) getApplication()).getApplicationComponent())
+                .build();
+    }
+
+    public ActivityComponent getActivityComponent() {
+        return mActivityComponent;
+    }
 
     @Override
     public void onFragmentAttached() {
@@ -58,4 +86,18 @@ public class BaseActivity extends AppCompatActivity implements BaseMvpView , Bas
     public void hideKeyboard() {
 
     }
+
+    public void setUnBinder(Unbinder unBinder) {
+        mUnBinder = unBinder;
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mUnBinder != null) {
+            mUnBinder.unbind();
+        }
+        super.onDestroy();
+    }
+
+    protected abstract void setUp();
 }

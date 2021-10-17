@@ -8,5 +8,10 @@ import com.blackseapps.interview.ui.base.BaseActivity;
  * This is an interview project.
  */
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseActivity implements SplashMvpView{
+
+    @Override
+    protected void setUp() {
+
+    }
 }
