@@ -1,5 +1,6 @@
 package com.blackseapps.interview.ui.fragment.listing;
 
+import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
 /**
@@ -10,5 +11,5 @@ import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
 public interface ListingMvpPresenter<V extends ListingMvpView> extends BaseMvpPresenter<V> {
 
-    void onViewPrepared();
+    void requestProduct(Product product);
 }

@@ -4,10 +4,14 @@ import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
 import com.blackseapps.interview.ui.fragment.adding.AddingPresenter;
+import com.blackseapps.interview.ui.fragment.listing.ListingMvpPresenter;
+import com.blackseapps.interview.ui.fragment.listing.ListingMvpView;
+import com.blackseapps.interview.ui.fragment.listing.ListingPresenter;
 import com.blackseapps.interview.ui.main.MainMvpPresenter;
 import com.blackseapps.interview.ui.main.MainMvpView;
 import com.blackseapps.interview.ui.main.MainPresenter;
@@ -44,9 +48,22 @@ public class ActivityModule {
 
     @Provides
     @PerActivity
-    AddingMvpPresenter<AddingMvpView> provideFeedPresenter(
+    AddingMvpPresenter<AddingMvpView> provideAddingPresenter(
             AddingPresenter<AddingMvpView> presenter) {
         return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    ListingMvpPresenter<ListingMvpView> provideListingPresenter(
+            ListingPresenter<ListingMvpView> presenter) {
+        return presenter;
+    }
+
+
+    @Provides
+    Product provideProduct() {
+        return new Product();
     }
 
     @Provides
@@ -60,5 +77,7 @@ public class ActivityModule {
     CompositeDisposable provideCompositeDisposable() {
         return new CompositeDisposable();
     }
+
+
 
 }

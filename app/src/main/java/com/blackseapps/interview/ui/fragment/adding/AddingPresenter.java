@@ -6,6 +6,7 @@ package com.blackseapps.interview.ui.fragment.adding;
  * This is an interview project.
  */
 
+import com.blackseapps.interview.data.DataManager;
 import com.blackseapps.interview.ui.base.BasePresenter;
 
 import javax.inject.Inject;
@@ -14,8 +15,8 @@ public class AddingPresenter<V extends AddingMvpView> extends BasePresenter<V>
         implements AddingMvpPresenter<V> {
 
     @Inject
-    public AddingPresenter() {
-
+    public AddingPresenter(DataManager mDataManager) {
+        super(mDataManager);
     }
 
     @Override

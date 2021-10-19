@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/margin_25dp"
                 android:layout_weight="12"
-                android:text="@string/product_name_text"
+                android:text="@string/product_title_text"
                 android:textSize="@dimen/text_size_20"
                 android:textStyle="bold" />
 

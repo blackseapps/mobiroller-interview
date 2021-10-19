@@ -1,5 +1,6 @@
 package com.blackseapps.interview.ui.main;
 
+import com.blackseapps.interview.data.DataManager;
 import com.blackseapps.interview.ui.base.BasePresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
@@ -16,8 +17,8 @@ public class MainPresenter<V extends MainMvpView> extends BasePresenter<V>
         implements MainMvpPresenter<V> {
 
     @Inject
-    public MainPresenter(){
-
+    public MainPresenter(DataManager mDataManager) {
+        super(mDataManager);
     }
 
     @Override

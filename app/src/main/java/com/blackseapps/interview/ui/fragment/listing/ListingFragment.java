@@ -9,9 +9,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.blackseapps.interview.R;
+import com.blackseapps.interview.data.network.model.Product;
+import com.blackseapps.interview.di.component.ActivityComponent;
 import com.blackseapps.interview.ui.base.BaseFragment;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class ListingFragment extends BaseFragment {
+import java.util.HashMap;
+
+import javax.inject.Inject;
+
+import butterknife.ButterKnife;
+
+public class ListingFragment extends BaseFragment implements ListingMvpView {
+
+
+    @Inject
+    Product product;
+
+    @Inject
+    ListingMvpPresenter<ListingMvpView> mPresenter;
 
 
     public static final String TAG = "ListingFragment";
@@ -29,11 +46,35 @@ public class ListingFragment extends BaseFragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_listing, container, false);
 
+
+        ActivityComponent component = getActivityComponent();
+
+        if (component != null) {
+            component.inject(this);
+            mPresenter.onAttach(this);
+        }
+
+        product.setTitle("test");
+        product.setDescription("test");
+        product.setCategoryUid(0);
+        product.setPrice("test");
+        product.setBrandName("test");
+        product.setStockCode("test");
+        product.setStockTotal(10);
+
+
+        mPresenter.requestProduct(product);
+
         return view;
     }
 
     @Override
     protected void setUp(View view) {
+
+    }
+
+    @Override
+    public void openActivityOnTokenExpire() {
 
     }
 }

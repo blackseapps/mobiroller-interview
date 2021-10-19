@@ -1,5 +1,6 @@
 package com.blackseapps.interview.ui.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,6 +64,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
                 .commit();
     }
 
+    @SuppressLint("NonConstantResourceId")
     void setupNavMenu() {
         mNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {

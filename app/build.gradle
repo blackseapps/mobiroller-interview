@@ -20,12 +20,12 @@ android {
 
     buildTypes {
         debug {
-          
-            }
+            buildConfigField("String", "BASE_URL", "\"https://mobiroller-b444b-default-rtdb.firebaseio.com/\"")
+        }
         release {
+            buildConfigField("String", "BASE_URL", "\"https://mobiroller-b444b-default-rtdb.firebaseio.com/\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
         }
     }
     compileOptions {

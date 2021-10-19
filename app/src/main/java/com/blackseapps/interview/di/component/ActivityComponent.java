@@ -3,6 +3,7 @@ package com.blackseapps.interview.di.component;
 import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.di.module.ActivityModule;
 import com.blackseapps.interview.ui.fragment.adding.AddingFragment;
+import com.blackseapps.interview.ui.fragment.listing.ListingFragment;
 import com.blackseapps.interview.ui.main.MainActivity;
 
 import dagger.Component;
@@ -20,6 +21,8 @@ public interface ActivityComponent {
     void inject(MainActivity activity);
 
     void inject(AddingFragment fragment);
+
+    void inject(ListingFragment fragment);
 
 
 }

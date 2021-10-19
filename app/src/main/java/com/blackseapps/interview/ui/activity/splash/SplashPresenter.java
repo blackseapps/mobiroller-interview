@@ -1,8 +1,11 @@
 package com.blackseapps.interview.ui.activity.splash;
 
+import com.blackseapps.interview.data.DataManager;
 import com.blackseapps.interview.ui.base.BasePresenter;
 import com.blackseapps.interview.ui.main.MainMvpPresenter;
 import com.blackseapps.interview.ui.main.MainMvpView;
+
+import javax.inject.Inject;
 
 /**
  * Created by mertKaradeniz on 17.10.2021
@@ -12,4 +15,9 @@ import com.blackseapps.interview.ui.main.MainMvpView;
 
 public class SplashPresenter<V extends SplashMvpView> extends BasePresenter<V>
         implements SplashMvpPresenter<V> {
+
+    @Inject
+    public SplashPresenter(DataManager dataManager) {
+        super(dataManager);
+    }
 }

@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import com.blackseapps.interview.R;
 import com.blackseapps.interview.ui.base.BaseFragment;
 
-public class AddingFragment extends BaseFragment {
+public class AddingFragment extends BaseFragment implements AddingMvpView {
 
     public static final String TAG = "AddingFragment";
 
@@ -34,6 +34,11 @@ public class AddingFragment extends BaseFragment {
 
     @Override
     protected void setUp(View view) {
+
+    }
+
+    @Override
+    public void openActivityOnTokenExpire() {
 
     }
 }
