@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.blackseapps.interview.MainApplication;
+
 import com.blackseapps.interview.R;
 import com.blackseapps.interview.di.component.ActivityComponent;
 import com.blackseapps.interview.di.component.DaggerActivityComponent;
@@ -113,6 +114,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvpV
         mUnBinder = unBinder;
     }
 
+
     @Override
     protected void onDestroy() {
         if (mUnBinder != null) {
@@ -120,6 +122,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvpV
         }
         super.onDestroy();
     }
+
 
     private void showSnackBar(String message) {
         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content),

@@ -1,11 +1,11 @@
 package com.blackseapps.interview.ui.base;
 
+
 import com.blackseapps.interview.data.DataManager;
 
 import javax.inject.Inject;
 
 public class BasePresenter<V extends BaseMvpView> implements BaseMvpPresenter<V> {
-
 
     private final DataManager mDataManager;
 

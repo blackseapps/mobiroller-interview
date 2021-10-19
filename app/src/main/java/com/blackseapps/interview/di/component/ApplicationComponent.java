@@ -2,7 +2,6 @@ package com.blackseapps.interview.di.component;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.blackseapps.interview.MainApplication;
 import com.blackseapps.interview.data.DataManager;
 import com.blackseapps.interview.di.module.ApplicationModule;

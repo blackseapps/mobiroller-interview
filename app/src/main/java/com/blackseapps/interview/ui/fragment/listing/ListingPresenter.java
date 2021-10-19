@@ -15,6 +15,7 @@ import javax.inject.Inject;
 public class ListingPresenter<V extends ListingMvpView> extends BasePresenter<V>
         implements ListingMvpPresenter<V> {
 
+
     @Inject
     public ListingPresenter(DataManager mDataManager) {
         super(mDataManager);

@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blackseapps.interview.data.network.model.Product;
+
 import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
@@ -77,7 +78,5 @@ public class ActivityModule {
     CompositeDisposable provideCompositeDisposable() {
         return new CompositeDisposable();
     }
-
-
 
 }

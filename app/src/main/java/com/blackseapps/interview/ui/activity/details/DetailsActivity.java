@@ -8,7 +8,7 @@ import com.blackseapps.interview.ui.base.BaseActivity;
  * This is an interview project.
  */
 
-public class DetailsActivity  extends BaseActivity {
+public class DetailsActivity  extends BaseActivity implements DetailsMvpView{
 
 
     @Override

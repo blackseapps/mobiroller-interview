@@ -39,6 +39,9 @@
                 android:layout_marginTop="@dimen/margin_10dp"
                 android:hint="@string/product_title_text"/>
 
+
+
+
             <EditText
                 android:id="@+id/productDescriptionTxt"
                 android:layout_width="@dimen/textview_width"

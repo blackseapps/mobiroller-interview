@@ -6,7 +6,6 @@ import com.blackseapps.interview.data.DataManager;
 import com.blackseapps.interview.di.component.ApplicationComponent;
 import com.blackseapps.interview.di.component.DaggerApplicationComponent;
 import com.blackseapps.interview.di.module.ApplicationModule;
-
 import javax.inject.Inject;
 
 public class MainApplication extends Application {
