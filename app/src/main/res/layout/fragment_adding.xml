@@ -17,19 +17,14 @@
             android:orientation="vertical">
 
 
-
             <Spinner
                 android:id="@+id/productCategoryTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                />
-
-            <Spinner
-                android:id="@+id/productSubCategoryTxt"
-                android:layout_width="@dimen/textview_width"
-                android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp" />
+                android:prompt="@string/spinner_category"
+                android:spinnerMode="dialog"
+                tools:ignore="HardcodedText" />
 
 
             <EditText
@@ -37,9 +32,7 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/product_title_text"/>
-
-
+                android:hint="@string/product_title_text" />
 
 
             <EditText
@@ -47,8 +40,7 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/product_description_text"/>
-
+                android:hint="@string/product_description_text" />
 
 
             <EditText
@@ -56,8 +48,7 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/brand_name_text"/>
-
+                android:hint="@string/brand_name_text" />
 
 
             <EditText
@@ -65,14 +56,14 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/product_price_text"/>
+                android:hint="@string/product_price_text" />
 
             <EditText
                 android:id="@+id/stockCodeTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/stock_code_text"/>
+                android:hint="@string/stock_code_text" />
 
 
             <EditText
@@ -80,13 +71,14 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/stock_total_text"/>
+                android:hint="@string/stock_total_text" />
 
             <Spinner
                 android:id="@+id/productStatusTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp" />
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:entries="@array/stockStatus" />
 
             <Button
                 android:id="@+id/saveProductButton"

@@ -11,4 +11,6 @@ import com.blackseapps.interview.ui.base.BaseMvpView;
 public interface AddingMvpView extends BaseMvpView {
 
 
+    void setUpSpinnerAdapter();
+
 }

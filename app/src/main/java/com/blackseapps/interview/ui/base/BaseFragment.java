@@ -1,5 +1,6 @@
 package com.blackseapps.interview.ui.base;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -9,18 +10,21 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
 import com.blackseapps.interview.di.component.ActivityComponent;
+import com.blackseapps.interview.utils.CommonUtils;
+
+import butterknife.Unbinder;
 
 public abstract class BaseFragment extends Fragment implements BaseMvpView{
 
     private BaseActivity mActivity;
+    private Unbinder mUnBinder;
+    private ProgressDialog mProgressDialog;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setUp(view);
     }
-
-
 
     @Override
     public void onAttach(Context context) {
@@ -36,11 +40,14 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
     @Override
     public void showLoading() {
         hideLoading();
+        mProgressDialog = CommonUtils.showLoadingDialog(this.getContext());
     }
 
     @Override
     public void hideLoading() {
-
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.cancel();
+        }
     }
 
     public ActivityComponent getActivityComponent() {
@@ -104,6 +111,16 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
         }
     }
 
+    public void onDestroy() {
+        if (mUnBinder != null) {
+            mUnBinder.unbind();
+        }
+        super.onDestroy();
+    }
+
+    public void setUnBinder(Unbinder unBinder) {
+        mUnBinder = unBinder;
+    }
 
     public interface Callback {
 

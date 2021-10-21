@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
@@ -15,17 +16,27 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+        testInstrumentationRunnerArgument "firebaseAppCheckDebugSecret", System.getenv("DBB09F4E-EB8E-4194-9EC5-432A8030D1DA") ?: ''
 
+    }
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"https://mobiroller-b444b-default-rtdb.firebaseio.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://mobiroller-329221-default-rtdb.asia-southeast1.firebasedatabase.app\"")
         }
         release {
-            buildConfigField("String", "BASE_URL", "\"https://mobiroller-b444b-default-rtdb.firebaseio.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://mobiroller-329221-default-rtdb.asia-southeast1.firebasedatabase.app\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storePassword 'testtest'
+            keyAlias 'testtest'
+            keyPassword 'testtest'
+            storeFile file('/Users/blacseapp/Desktop/mobiroller-interview/key')
         }
     }
     compileOptions {
@@ -51,7 +62,9 @@ dependencies {
     //Firebase
     implementation platform("com.google.firebase:firebase-bom:${rootProject.ext.firebaseBom}")
     //Firebase Database
-    implementation "com.google.firebase:firebase-database"
+    implementation "com.google.firebase:firebase-database:20.0.2"
+
+    implementation 'com.google.firebase:firebase-appcheck-safetynet:16.0.0-beta03'
 
     //Dagger 2 (Dependency Injection)
     implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"

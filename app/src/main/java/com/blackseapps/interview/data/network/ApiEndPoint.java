@@ -11,8 +11,8 @@ import com.blackseapps.interview.BuildConfig;
 
 public final class ApiEndPoint {
 
-    public static final String ENDPOINT_PRODUCT = BuildConfig.BASE_URL + "product";
+    public static final String ENDPOINT_PRODUCT = "product";
 
-    public static final String ENDPOINT_CATEGORY = BuildConfig.BASE_URL + "category";
+    public static final String ENDPOINT_CATEGORY = "category";
 
 }

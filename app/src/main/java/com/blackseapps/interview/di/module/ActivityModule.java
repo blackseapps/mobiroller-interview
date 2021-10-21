@@ -3,10 +3,13 @@ package com.blackseapps.interview.di.module;
 import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.blackseapps.interview.data.network.model.Product;
 
 import com.blackseapps.interview.di.PerActivity;
+import com.blackseapps.interview.ui.fragment.listing.ListingAdapter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpView;
 import com.blackseapps.interview.ui.fragment.adding.AddingPresenter;
@@ -16,6 +19,9 @@ import com.blackseapps.interview.ui.fragment.listing.ListingPresenter;
 import com.blackseapps.interview.ui.main.MainMvpPresenter;
 import com.blackseapps.interview.ui.main.MainMvpView;
 import com.blackseapps.interview.ui.main.MainPresenter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import dagger.Module;
 import dagger.Provides;
@@ -79,4 +85,14 @@ public class ActivityModule {
         return new CompositeDisposable();
     }
 
+
+    @Provides
+    ListingAdapter provideAddingAdapter() {
+        return new ListingAdapter(new ArrayList<Product>());
+    }
+
+    @Provides
+    GridLayoutManager provideLinearLayoutManager(AppCompatActivity activity) {
+        return new GridLayoutManager(activity, 1);
+    }
 }

@@ -14,25 +14,30 @@ public class Product {
     private String title;
     private String description;
     private int categoryUid;
+    private String categoryName;
     private String brandName;
     private String price;
     private String stockCode;
     private int stockTotal;
+    private int stockStatus;
 
     @Inject
     public Product() {
 
     }
 
-    public Product(String uid, String title, String description, int categoryUid, String brandName, String price, String stockCode, int stockTotal) {
+    public Product(String uid, String title, String description, int categoryUid, String categoryName,  String brandName, String price, String stockCode, int stockTotal, int stockStatus) {
         this.uid = uid;
         this.title = title;
         this.description = description;
         this.categoryUid = categoryUid;
+        this.categoryName = categoryName;
         this.brandName = brandName;
         this.price = price;
         this.stockCode = stockCode;
         this.stockTotal = stockTotal;
+        this.stockStatus = stockStatus;
+
     }
 
     public String getUid() {
@@ -97,5 +102,21 @@ public class Product {
 
     public void setStockTotal(int stockTotal) {
         this.stockTotal = stockTotal;
+    }
+
+    public int isStockStatus() {
+        return stockStatus;
+    }
+
+    public void setStockStatus(int stockStatus) {
+        this.stockStatus = stockStatus;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

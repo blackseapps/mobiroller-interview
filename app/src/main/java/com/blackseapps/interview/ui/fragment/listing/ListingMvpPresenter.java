@@ -11,5 +11,5 @@ import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
 public interface ListingMvpPresenter<V extends ListingMvpView> extends BaseMvpPresenter<V> {
 
-    void requestProduct(Product product);
+    void requestProductList();
 }

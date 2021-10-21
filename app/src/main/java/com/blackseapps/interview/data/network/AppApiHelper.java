@@ -1,5 +1,6 @@
 package com.blackseapps.interview.data.network;
 
+import com.blackseapps.interview.BuildConfig;
 import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DataSnapshot;
@@ -28,32 +29,31 @@ public class AppApiHelper implements ApiHelper {
 
     }
 
-
     @Override
     public DatabaseReference getProductApiCall() {
         return FirebaseDatabase.
-                getInstance().
+                getInstance(BuildConfig.BASE_URL).
                 getReference().
                 getDatabase().
-                getReferenceFromUrl(ApiEndPoint.ENDPOINT_PRODUCT);
+                getReference(ApiEndPoint.ENDPOINT_PRODUCT);
     }
 
     @Override
     public DatabaseReference getCategoryApiCall() {
         return FirebaseDatabase.
-                getInstance().
+                getInstance(BuildConfig.BASE_URL).
                 getReference().
                 getDatabase().
-                getReferenceFromUrl(ApiEndPoint.ENDPOINT_PRODUCT);
+                getReference(ApiEndPoint.ENDPOINT_PRODUCT);
     }
 
     @Override
     public Single<Product> setProductApiCall(Product product) {
         DatabaseReference myRef = FirebaseDatabase.
-                getInstance().
+                getInstance(BuildConfig.BASE_URL).
                 getReference().
                 getDatabase().
-                getReferenceFromUrl(ApiEndPoint.ENDPOINT_PRODUCT);
+                getReference(ApiEndPoint.ENDPOINT_PRODUCT);
         myRef.push().setValue(product);
         return null;
     }
@@ -61,10 +61,10 @@ public class AppApiHelper implements ApiHelper {
     @Override
     public Single<Category> setCategoryApiCall(Category category) {
         DatabaseReference myRef = FirebaseDatabase.
-                getInstance().
+                getInstance(BuildConfig.BASE_URL).
                 getReference().
                 getDatabase().
-                getReferenceFromUrl(ApiEndPoint.ENDPOINT_CATEGORY);
+                getReference(ApiEndPoint.ENDPOINT_CATEGORY);
         myRef.push().setValue(category);
 
         return null;

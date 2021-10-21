@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "93118426512",
-    "firebase_url": "https://mobiroller-b444b-default-rtdb.firebaseio.com",
-    "project_id": "mobiroller-b444b",
-    "storage_bucket": "mobiroller-b444b.appspot.com"
+    "project_number": "561482582748",
+    "firebase_url": "https://mobiroller-329221-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mobiroller-329221",
+    "storage_bucket": "mobiroller-329221.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:93118426512:android:6699bf3d59714645b5d715",
+        "mobilesdk_app_id": "1:561482582748:android:783101e9d2a3b87138c219",
         "android_client_info": {
           "package_name": "com.blackseapps.interview"
         }
       },
       "oauth_client": [
         {
-          "client_id": "93118426512-1hr9dkbd0ln07pi8tpu0l5m956qi3idv.apps.googleusercontent.com",
+          "client_id": "561482582748-3tkskimru01dvt6kk90aqld6oakd0req.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blackseapps.interview",
+            "certificate_hash": "3c4609e1fbb364cac1075b9ba4649cfe1a1a108c"
+          }
+        },
+        {
+          "client_id": "561482582748-08v1enegml3dnducf4hhvm2j7k2s3pus.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCypEgPZv7Kg9dZiZieXNiEIEyObOiDmQE"
+          "current_key": "AIzaSyA2B-h04-kd565-yzfUybrD3WBnX6_4-Xs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "93118426512-1hr9dkbd0ln07pi8tpu0l5m956qi3idv.apps.googleusercontent.com",
+              "client_id": "561482582748-08v1enegml3dnducf4hhvm2j7k2s3pus.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

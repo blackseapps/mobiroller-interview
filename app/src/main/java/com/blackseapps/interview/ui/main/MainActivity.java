@@ -2,11 +2,16 @@ package com.blackseapps.interview.ui.main;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import com.blackseapps.interview.R;
 import com.blackseapps.interview.ui.base.BaseActivity;
 import com.blackseapps.interview.ui.fragment.adding.AddingFragment;
 import com.blackseapps.interview.ui.fragment.listing.ListingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -26,15 +31,18 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         getActivityComponent().inject(this);
         setUnBinder(ButterKnife.bind(this));
         mPresenter.onAttach(this);
         setUp();
+
     }
 
     @Override
     protected void setUp() {
         setupNavMenu();
+        mPresenter.onOpenListingFragment();
     }
 
 
@@ -73,4 +81,18 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         });
     }
 
+    @Override
+    public void onFragmentDetached(String tag) {
+        super.onFragmentDetached(tag);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentByTag(tag);
+        if (fragment != null) {
+            fragmentManager
+                    .beginTransaction()
+                    .disallowAddToBackStack()
+                    .remove(fragment)
+                    .commitNow();
+        }
+    }
 }

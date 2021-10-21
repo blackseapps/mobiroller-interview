@@ -6,9 +6,12 @@ package com.blackseapps.interview.ui.fragment.adding;
  * This is an interview project.
  */
 
+import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
 public interface AddingMvpPresenter<V extends AddingMvpView> extends BaseMvpPresenter<V> {
 
     void onViewPrepared();
+
+    void onClickSaveButton(Product product);
 }

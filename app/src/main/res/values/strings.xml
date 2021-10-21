@@ -11,6 +11,7 @@
     <string name="product_button_delete">Delete</string>
     <string name="product_button_update">Update</string>
     <string name="stock_code_text">Stock Code</string>
+    <string name="spinner_category">Please, select a category</string>
 
     <!-- Bottom Navigation -->
     <string name="title_home">Products</string>
@@ -19,5 +20,22 @@
 
     <!-- Activity Names-->
     <string name="title_activity_main">sanaBi</string>
+    <string name="listing_adapter_stock_total">Stok Yok</string>
 
+    <!-- Empty Text-->
+    <string name="product_empty_title">Your list is currently empty.</string>
+    <string name="product_empty_subtitle">You can add new product</string>
+    <string name="adding_empty_category">Please, select a category.</string>
+    <string name="adding_empty_title">Please, enter a title.</string>
+    <string name="adding_empty_description">Please, enter a description.</string>
+    <string name="adding_empty_brand">Please, enter a brand.</string>
+    <string name="adding_empty_price">Please, enter a price.</string>
+    <string name="adding_empty_stock_code">Please, enter a stock code.</string>
+    <string name="adding_empty_stock_total">Please, enter a stock total.</string>
+
+    <!-- Spinner Stock Status Array -->
+    <string-array name="stockStatus">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>
