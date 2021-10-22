@@ -1,7 +1,11 @@
 package com.blackseapps.interview.ui.main;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -36,7 +40,6 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         setUnBinder(ButterKnife.bind(this));
         mPresenter.onAttach(this);
         setUp();
-
     }
 
     @Override
@@ -80,6 +83,8 @@ public class MainActivity extends BaseActivity implements MainMvpView {
             }
         });
     }
+
+
 
     @Override
     public void onFragmentDetached(String tag) {

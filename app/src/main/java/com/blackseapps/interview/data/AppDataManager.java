@@ -4,6 +4,7 @@ import com.blackseapps.interview.data.network.ApiHelper;
 import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
 
 import javax.inject.Inject;
 
@@ -43,5 +44,25 @@ public class AppDataManager implements DataManager {
     @Override
     public Single<Category> setCategoryApiCall(Category category) {
         return mApiHelper.setCategoryApiCall(category);
+    }
+
+    @Override
+    public Query getSortByNameIncreasingApiCall() {
+        return mApiHelper.getSortByNameIncreasingApiCall();
+    }
+
+    @Override
+    public Query getSortByNameDescendingApiCall() {
+        return mApiHelper.getSortByNameDescendingApiCall();
+    }
+
+    @Override
+    public Query getSortByPriceIncreasingApiCall() {
+        return mApiHelper.getSortByPriceIncreasingApiCall();
+    }
+
+    @Override
+    public Query getSortByPriceDescendingApiCall() {
+        return mApiHelper.getSortByPriceDescendingApiCall();
     }
 }

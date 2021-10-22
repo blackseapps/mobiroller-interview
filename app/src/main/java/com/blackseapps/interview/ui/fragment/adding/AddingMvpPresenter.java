@@ -6,6 +6,8 @@ package com.blackseapps.interview.ui.fragment.adding;
  * This is an interview project.
  */
 
+import androidx.fragment.app.FragmentManager;
+
 import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
@@ -14,4 +16,6 @@ public interface AddingMvpPresenter<V extends AddingMvpView> extends BaseMvpPres
     void onViewPrepared();
 
     void onClickSaveButton(Product product);
+
+    void  showCategoryAddingDialog(FragmentManager fragmentManager);
 }

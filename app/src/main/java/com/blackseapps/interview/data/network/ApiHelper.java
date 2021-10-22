@@ -3,6 +3,7 @@ package com.blackseapps.interview.data.network;
 import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
 
 import io.reactivex.Single;
 
@@ -22,4 +23,13 @@ public interface ApiHelper {
 
     Single<Category> setCategoryApiCall(Category category);
 
+    Query getSortByNameIncreasingApiCall();
+
+    Query getSortByNameDescendingApiCall();
+
+    Query getSortByPriceIncreasingApiCall();
+
+    Query getSortByPriceDescendingApiCall();
+
 }
+

@@ -12,4 +12,13 @@ import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 public interface ListingMvpPresenter<V extends ListingMvpView> extends BaseMvpPresenter<V> {
 
     void requestProductList();
+
+    void onSortByNameIncreasing();
+
+    void onSortByNameDescending();
+
+    void onSortByPriceIncreasing();
+
+    void onSortByPriceDescending();
+
 }

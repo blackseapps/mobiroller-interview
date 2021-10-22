@@ -20,6 +20,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activity.details.DetailsActivity" />
+
+        <activity android:name=".ui.activity.splash.SplashActivity" />
     </application>
 
 </manifest>

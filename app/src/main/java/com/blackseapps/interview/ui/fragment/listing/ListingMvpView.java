@@ -18,4 +18,6 @@ public interface ListingMvpView extends BaseMvpView {
     void onResponseError(String error);
 
     void onResponseEmpty(String message);
+
+    void onSortListDescending();
 }

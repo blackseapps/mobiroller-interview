@@ -13,6 +13,7 @@ import com.blackseapps.interview.R;
 import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.ui.base.BaseViewHolder;
 
+import java.util.Collections;
 import java.util.List;
 
 
@@ -33,10 +34,14 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
 
     private List<Product> productList;
-
+    private Callback mCallback;
 
     public ListingAdapter(List<Product> productList) {
         this.productList = productList;
+    }
+
+    public void setCallback(Callback callback) {
+        this.mCallback = callback;
     }
 
     @NonNull
@@ -77,11 +82,22 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         }
     }
 
+    public void reverseList() {
+        Collections.reverse(this.productList);
+        notifyDataSetChanged();
+    }
+
     public void addItems(List<Product> productList) {
+        this.productList.clear();
         this.productList.addAll(productList);
         notifyDataSetChanged();
     }
 
+    public interface Callback {
+        void onRetryClick();
+
+        void onItemClick(Product product);
+    }
 
     public class ViewHolder extends BaseViewHolder {
 
@@ -117,14 +133,18 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             }
 
             if (product.getStockTotal() != 0) {
-                productItemStockTotalTxt.setText(product.getStockTotal());
+                productItemStockTotalTxt.setText(String.valueOf(product.getStockTotal()));
             } else
                 productItemStockTotalTxt.setText(R.string.listing_adapter_stock_total);
 
-            if (product.getPrice() != null) {
-                productItemPriceTxt.setText(product.getPrice());
+            if (product.getPrice() != 0) {
+                productItemPriceTxt.setText(String.valueOf(product.getPrice()));
             }
 
+            itemView.setOnClickListener(view -> {
+                if (mCallback != null)
+                    mCallback.onItemClick(product);
+            });
         }
     }
 

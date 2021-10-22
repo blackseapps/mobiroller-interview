@@ -2,11 +2,13 @@ package com.blackseapps.interview.ui.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import com.blackseapps.interview.MainApplication;
 
 import com.blackseapps.interview.R;
+import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.di.component.ActivityComponent;
 import com.blackseapps.interview.di.component.DaggerActivityComponent;
 import com.blackseapps.interview.di.module.ActivityModule;
@@ -36,6 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvpV
                 .activityModule(new ActivityModule(this))
                 .applicationComponent(((MainApplication) getApplication()).getApplicationComponent())
                 .build();
+
     }
 
     public ActivityComponent getActivityComponent() {
@@ -123,6 +127,13 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvpV
         super.onDestroy();
     }
 
+    public <T> T getIntentData(String key) {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            return getIntent().getExtras().getParcelable(key);
+        } else
+            return null;
+    }
 
     private void showSnackBar(String message) {
         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content),

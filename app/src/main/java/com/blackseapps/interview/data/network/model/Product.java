@@ -1,5 +1,8 @@
 package com.blackseapps.interview.data.network.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import javax.inject.Inject;
 
 /**
@@ -8,7 +11,7 @@ import javax.inject.Inject;
  * This is an interview project.
  */
 
-public class Product {
+public class Product implements Parcelable {
 
     private String uid;
     private String title;
@@ -16,7 +19,7 @@ public class Product {
     private int categoryUid;
     private String categoryName;
     private String brandName;
-    private String price;
+    private double price;
     private String stockCode;
     private int stockTotal;
     private int stockStatus;
@@ -26,7 +29,7 @@ public class Product {
 
     }
 
-    public Product(String uid, String title, String description, int categoryUid, String categoryName,  String brandName, String price, String stockCode, int stockTotal, int stockStatus) {
+    public Product(String uid, String title, String description, int categoryUid, String categoryName, String brandName, double price, String stockCode, int stockTotal, int stockStatus) {
         this.uid = uid;
         this.title = title;
         this.description = description;
@@ -80,11 +83,11 @@ public class Product {
         this.brandName = brandName;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -118,5 +121,49 @@ public class Product {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Product> CREATOR = new Creator<Product>() {
+        @Override
+        public Product createFromParcel(Parcel in) {
+            return new Product(in);
+        }
+
+        @Override
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
+
+    protected Product(Parcel in) {
+        uid = in.readString();
+        title = in.readString();
+        description = in.readString();
+        categoryUid = in.readInt();
+        categoryName = in.readString();
+        brandName = in.readString();
+        price = in.readDouble();
+        stockCode = in.readString();
+        stockTotal = in.readInt();
+        stockStatus = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(uid);
+        dest.writeString(title);
+        dest.writeString(description);
+        dest.writeInt(categoryUid);
+        dest.writeString(categoryName);
+        dest.writeString(brandName);
+        dest.writeDouble(price);
+        dest.writeString(stockCode);
+        dest.writeInt(stockTotal);
+        dest.writeInt(stockStatus);
     }
 }
