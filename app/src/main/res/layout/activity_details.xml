@@ -8,8 +8,11 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@color/black"
-        android:contentDescription="@string/product_image_text" />
+        android:background="@color/white"
+        android:contentDescription="@string/product_image_text"
+        android:paddingTop="@dimen/margin_10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/empty_image_1" />
 
 
     <LinearLayout
@@ -45,46 +48,46 @@
                 tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_20dp"
+
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/productCategoryTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/details_category_text"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/productBrandTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="@string/brand_name_text"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/productDescriptionTxt"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15dp"
                 android:text="@string/product_description_text"
                 android:textSize="@dimen/text_size_12" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/stockCodeTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:orientation="horizontal"
-                android:padding="@dimen/margin_10dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/product_button_delete"
-                    android:layout_marginEnd="@dimen/margin_5dp"
-                    android:textColor="@color/text_color"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                  />
-
-                <Button
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/product_button_update"
-                    android:layout_marginStart="@dimen/margin_5dp"
-                    android:textColor="@color/black"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-            </LinearLayout>
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="@string/stock_code_text"
+                android:textSize="@dimen/text_size_12" />
 
         </LinearLayout>
     </LinearLayout>

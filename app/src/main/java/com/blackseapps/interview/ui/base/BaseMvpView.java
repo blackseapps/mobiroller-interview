@@ -1,5 +1,7 @@
 package com.blackseapps.interview.ui.base;
 
+import android.content.DialogInterface;
+
 import androidx.annotation.StringRes;
 
 public interface BaseMvpView {
@@ -20,5 +22,6 @@ public interface BaseMvpView {
     boolean isNetworkConnected();
 
     void hideKeyboard();
+
 
 }

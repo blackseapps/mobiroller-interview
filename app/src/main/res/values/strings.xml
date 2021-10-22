@@ -38,6 +38,13 @@
     <string name="descending_by_name">Descending by Name</string>
     <string name="increasing_by_price">Increasing by Price</string>
     <string name="descending_by_price">Descending by Price</string>
+    <string name="update_text">Update</string>
+    <string name="delete_item_text">Delete Item</string>
+    <string name="details_category_text">Category</string>
+
+
+    <string name="unit_tl">₺</string>
+    <string name="stock_total_number_text">total</string>
 
     <!-- Spinner Stock Status Array -->
     <string-array name="stockStatus">

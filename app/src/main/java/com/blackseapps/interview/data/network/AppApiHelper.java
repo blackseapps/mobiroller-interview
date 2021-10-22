@@ -52,7 +52,9 @@ public class AppApiHelper implements ApiHelper {
                 getReference().
                 getDatabase().
                 getReference(ApiEndPoint.ENDPOINT_PRODUCT);
-        myRef.push().setValue(product);
+        myRef = myRef.push();
+        product.setKey(myRef.getKey());
+        myRef.setValue(product);
         return null;
     }
 
@@ -64,7 +66,6 @@ public class AppApiHelper implements ApiHelper {
                 getDatabase().
                 getReference(ApiEndPoint.ENDPOINT_CATEGORY);
         myRef.push().setValue(category);
-
         return null;
     }
 
@@ -106,6 +107,27 @@ public class AppApiHelper implements ApiHelper {
                 getDatabase().
                 getReference(ApiEndPoint.ENDPOINT_PRODUCT).
                 orderByChild("price");
+    }
+
+    @Override
+    public Query deleteProductApiCall() {
+        return FirebaseDatabase.
+                getInstance(BuildConfig.BASE_URL).
+                getReference().
+                getDatabase().
+                getReference(ApiEndPoint.ENDPOINT_PRODUCT).
+                orderByChild("key");
+    }
+
+    @Override
+    public DatabaseReference updateProductApiCall(Product product) {
+        DatabaseReference myRef = FirebaseDatabase.
+                getInstance(BuildConfig.BASE_URL).
+                getReference().
+                getDatabase().
+                getReference("/" + ApiEndPoint.ENDPOINT_PRODUCT + "/" + product.getKey());
+        myRef.setValue(product);
+        return myRef;
     }
 }
 

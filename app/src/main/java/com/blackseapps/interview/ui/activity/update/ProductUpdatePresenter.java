@@ -1,41 +1,30 @@
-package com.blackseapps.interview.ui.fragment.adding;
+package com.blackseapps.interview.ui.activity.update;
+
+import android.content.DialogInterface;
+
+import com.blackseapps.interview.data.DataManager;
+import com.blackseapps.interview.data.network.model.Product;
+import com.blackseapps.interview.ui.base.BasePresenter;
+
+import javax.inject.Inject;
 
 /**
- * Created by mertKaradeniz on 17.10.2021
+ * Created by mertKaradeniz on 23.10.2021
  * <p>
  * This is an interview project.
  */
 
-import android.util.Log;
-
-import androidx.fragment.app.FragmentManager;
-
-import com.blackseapps.interview.R;
-import com.blackseapps.interview.data.DataManager;
-import com.blackseapps.interview.data.network.model.Product;
-import com.blackseapps.interview.ui.base.BasePresenter;
-import com.blackseapps.interview.ui.dilalog.CategoryAddDialog.CategoryAddDialog;
-
-import javax.inject.Inject;
-
-public class AddingPresenter<V extends AddingMvpView> extends BasePresenter<V>
-        implements AddingMvpPresenter<V> {
-
+public class ProductUpdatePresenter<V extends ProductUpdateMvpView> extends BasePresenter<V>
+        implements ProductUpdateMvpPresenter<V> {
 
     @Inject
-    public AddingPresenter(DataManager mDataManager) {
-        super(mDataManager);
+    public ProductUpdatePresenter(DataManager dataManager) {
+        super(dataManager);
     }
 
     @Override
-    public void onViewPrepared() {
-
-    }
-
-    @Override
-    public void onClickSaveButton(Product product) {
-
-        /*if (product.getCategoryName() == null || product.getCategoryName().isEmpty()) {
+    public void onClickUpdateButton(Product product) {
+         /*if (product.getCategoryName() == null || product.getCategoryName().isEmpty()) {
             getMvpView().onError(R.string.adding_empty_category);
             return;
         }
@@ -70,15 +59,8 @@ public class AddingPresenter<V extends AddingMvpView> extends BasePresenter<V>
             return;
         }*/
 
+        getDataManager().updateProductApiCall(product);
 
-        getDataManager().setProductApiCall(product);
 
-        getMvpView().showMessage("Successful");
-        getMvpView().requestFinally();
-    }
-
-    @Override
-    public void showCategoryAddingDialog(FragmentManager fragmentManager) {
-        CategoryAddDialog.newInstance().show(fragmentManager);
     }
 }

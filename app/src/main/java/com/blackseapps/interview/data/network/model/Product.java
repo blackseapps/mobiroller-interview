@@ -13,7 +13,7 @@ import javax.inject.Inject;
 
 public class Product implements Parcelable {
 
-    private String uid;
+    private String key;
     private String title;
     private String description;
     private int categoryUid;
@@ -29,8 +29,8 @@ public class Product implements Parcelable {
 
     }
 
-    public Product(String uid, String title, String description, int categoryUid, String categoryName, String brandName, double price, String stockCode, int stockTotal, int stockStatus) {
-        this.uid = uid;
+    public Product(String key, String title, String description, int categoryUid, String categoryName, String brandName, double price, String stockCode, int stockTotal, int stockStatus) {
+        this.key = key;
         this.title = title;
         this.description = description;
         this.categoryUid = categoryUid;
@@ -43,12 +43,12 @@ public class Product implements Parcelable {
 
     }
 
-    public String getUid() {
-        return uid;
+    public String getKey() {
+        return key;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getTitle() {
@@ -141,7 +141,7 @@ public class Product implements Parcelable {
     };
 
     protected Product(Parcel in) {
-        uid = in.readString();
+        key = in.readString();
         title = in.readString();
         description = in.readString();
         categoryUid = in.readInt();
@@ -155,7 +155,7 @@ public class Product implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(uid);
+        dest.writeString(key);
         dest.writeString(title);
         dest.writeString(description);
         dest.writeInt(categoryUid);

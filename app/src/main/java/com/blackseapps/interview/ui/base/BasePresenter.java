@@ -47,4 +47,6 @@ public class BasePresenter<V extends BaseMvpView> implements BaseMvpPresenter<V>
     public void setUserAsLoggedOut() {
 
     }
+
+
 }
