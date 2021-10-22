@@ -80,13 +80,6 @@
                 android:layout_marginTop="@dimen/margin_10dp"
                 android:entries="@array/stockStatus" />
 
-            <Button
-                android:id="@+id/saveProductButton"
-                android:layout_width="@dimen/textview_width"
-                android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:layout_marginBottom="@dimen/margin_100dp"
-                android:text="@string/product_button_text" />
 
         </LinearLayout>
     </ScrollView>

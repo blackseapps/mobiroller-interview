@@ -32,6 +32,12 @@
     <string name="adding_empty_price">Please, enter a price.</string>
     <string name="adding_empty_stock_code">Please, enter a stock code.</string>
     <string name="adding_empty_stock_total">Please, enter a stock total.</string>
+    <string name="dialog_category_text">Please, enter a category</string>
+    <string name="listing_menu_sorting_text">Sorting</string>
+    <string name="increasing_by_name">Increasing by Name</string>
+    <string name="descending_by_name">Descending by Name</string>
+    <string name="increasing_by_price">Increasing by Price</string>
+    <string name="descending_by_price">Descending by Price</string>
 
     <!-- Spinner Stock Status Array -->
     <string-array name="stockStatus">

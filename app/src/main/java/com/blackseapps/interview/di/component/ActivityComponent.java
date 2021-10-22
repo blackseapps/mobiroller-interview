@@ -2,6 +2,8 @@ package com.blackseapps.interview.di.component;
 
 import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.di.module.ActivityModule;
+import com.blackseapps.interview.ui.activity.details.DetailsActivity;
+import com.blackseapps.interview.ui.dilalog.CategoryAddDialog.CategoryAddDialog;
 import com.blackseapps.interview.ui.fragment.adding.AddingFragment;
 import com.blackseapps.interview.ui.fragment.listing.ListingFragment;
 import com.blackseapps.interview.ui.main.MainActivity;
@@ -24,4 +26,7 @@ public interface ActivityComponent {
 
     void inject(ListingFragment fragment);
 
+    void inject(CategoryAddDialog categoryAddDialog);
+
+    void inject(DetailsActivity detailsActivity);
 }

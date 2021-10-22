@@ -36,7 +36,6 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
         }
     }
 
-
     @Override
     public void showLoading() {
         hideLoading();
@@ -60,7 +59,6 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
     public BaseActivity getBaseActivity() {
         return mActivity;
     }
-
 
     @Override
     public void onError(String message) {
