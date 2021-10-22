@@ -183,4 +183,6 @@ public abstract class BaseDialog extends DialogFragment implements DialogView {
         super.onDestroy();
     }
 
+
+
 }

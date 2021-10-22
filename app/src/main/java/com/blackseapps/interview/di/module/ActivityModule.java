@@ -13,6 +13,9 @@ import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.ui.activity.details.DetailsMvpPresenter;
 import com.blackseapps.interview.ui.activity.details.DetailsMvpView;
 import com.blackseapps.interview.ui.activity.details.DetailsPresenter;
+import com.blackseapps.interview.ui.activity.update.ProductUpdateMvpPresenter;
+import com.blackseapps.interview.ui.activity.update.ProductUpdateMvpView;
+import com.blackseapps.interview.ui.activity.update.ProductUpdatePresenter;
 import com.blackseapps.interview.ui.dilalog.CategoryAddDialog.CategoryAdapter;
 import com.blackseapps.interview.ui.fragment.listing.ListingAdapter;
 import com.blackseapps.interview.ui.fragment.adding.AddingMvpPresenter;
@@ -110,6 +113,13 @@ public class ActivityModule {
     @PerActivity
     DetailsMvpPresenter<DetailsMvpView> provideDetailsPresenter(
             DetailsPresenter<DetailsMvpView> presenter) {
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    ProductUpdateMvpPresenter<ProductUpdateMvpView> provideProductUpdatePresenter(
+            ProductUpdatePresenter<ProductUpdateMvpView> presenter) {
         return presenter;
     }
 }

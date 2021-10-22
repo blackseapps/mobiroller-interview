@@ -31,5 +31,9 @@ public interface ApiHelper {
 
     Query getSortByPriceDescendingApiCall();
 
+    Query deleteProductApiCall();
+
+    DatabaseReference updateProductApiCall(Product product);
+
 }
 

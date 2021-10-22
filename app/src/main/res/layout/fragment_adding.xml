@@ -38,9 +38,15 @@
             <EditText
                 android:id="@+id/productDescriptionTxt"
                 android:layout_width="@dimen/textview_width"
-                android:layout_height="@dimen/textview_height"
+                android:layout_height="170dp"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:hint="@string/product_description_text" />
+                android:gravity="top|start"
+                android:hint="@string/product_description_text"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical" />
 
 
             <EditText

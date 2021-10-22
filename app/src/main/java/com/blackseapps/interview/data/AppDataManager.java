@@ -65,4 +65,14 @@ public class AppDataManager implements DataManager {
     public Query getSortByPriceDescendingApiCall() {
         return mApiHelper.getSortByPriceDescendingApiCall();
     }
+
+    @Override
+    public Query deleteProductApiCall() {
+        return mApiHelper.deleteProductApiCall();
+    }
+
+    @Override
+    public DatabaseReference updateProductApiCall(Product product) {
+        return mApiHelper.updateProductApiCall(product);
+    }
 }

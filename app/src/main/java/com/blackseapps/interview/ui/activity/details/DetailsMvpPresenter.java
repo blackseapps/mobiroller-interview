@@ -9,5 +9,9 @@ import com.blackseapps.interview.ui.main.MainMvpView;
  * This is an interview project.
  */
 
-public interface DetailsMvpPresenter <V extends DetailsMvpView> extends BaseMvpPresenter<V> {
+public interface DetailsMvpPresenter<V extends DetailsMvpView> extends BaseMvpPresenter<V> {
+
+    void onHandleDeleteItem(String uId);
+
+    void onHandleUpdateItem(String uId);
 }

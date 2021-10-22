@@ -1,6 +1,7 @@
 package com.blackseapps.interview.ui.base;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
@@ -21,6 +22,7 @@ import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.di.component.ActivityComponent;
 import com.blackseapps.interview.di.component.DaggerActivityComponent;
 import com.blackseapps.interview.di.module.ActivityModule;
+import com.blackseapps.interview.utils.CommonUtils;
 import com.google.android.material.snackbar.Snackbar;
 
 import butterknife.Unbinder;
@@ -144,6 +146,12 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvpV
         textView.setTextColor(ContextCompat.getColor(this, R.color.white));
         snackbar.show();
     }
+
+
+    public void showAlertDialog(DialogInterface.OnClickListener positive, String title) {
+        CommonUtils.showAlertDialog(this, positive, title);
+    }
+
 
     protected abstract void setUp();
 }

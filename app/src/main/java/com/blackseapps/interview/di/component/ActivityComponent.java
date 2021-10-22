@@ -3,6 +3,7 @@ package com.blackseapps.interview.di.component;
 import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.di.module.ActivityModule;
 import com.blackseapps.interview.ui.activity.details.DetailsActivity;
+import com.blackseapps.interview.ui.activity.update.ProductUpdateActivity;
 import com.blackseapps.interview.ui.dilalog.CategoryAddDialog.CategoryAddDialog;
 import com.blackseapps.interview.ui.fragment.adding.AddingFragment;
 import com.blackseapps.interview.ui.fragment.listing.ListingFragment;
@@ -29,4 +30,6 @@ public interface ActivityComponent {
     void inject(CategoryAddDialog categoryAddDialog);
 
     void inject(DetailsActivity detailsActivity);
+
+    void inject(ProductUpdateActivity productUpdateActivity);
 }

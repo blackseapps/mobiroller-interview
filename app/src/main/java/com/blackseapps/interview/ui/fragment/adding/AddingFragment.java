@@ -131,17 +131,17 @@ public class AddingFragment extends BaseFragment implements AddingMvpView {
 
         int stockTotal = 0;
         double price = 0;
-
-        if (!stockTotalTxt.getText().toString().isEmpty())
-            stockTotal = Integer.parseInt(stockTotalTxt.getText().toString());
-
-        if (!productPriceTxt.getText().toString().isEmpty())
-            price = Double.parseDouble(productPriceTxt.getText().toString());
-
-
         String CategoryTxt = "";
-        if (productCategoryTxt.getSelectedItem() != null)
+
+        if (!stockTotalTxt.getText().toString().isEmpty()) {
+            stockTotal = Integer.parseInt(stockTotalTxt.getText().toString());
+        }
+        if (!productPriceTxt.getText().toString().isEmpty()) {
+            price = Double.parseDouble(productPriceTxt.getText().toString());
+        }
+        if (productCategoryTxt.getSelectedItem() != null) {
             CategoryTxt = productCategoryTxt.getSelectedItem().toString();
+        }
 
 
         product.setTitle(productTitleTxt.getText().toString());
@@ -165,6 +165,15 @@ public class AddingFragment extends BaseFragment implements AddingMvpView {
             return 0;
     }
 
+
+    @Override
+    public void requestFinally() {
+        productTitleTxt.setText("");
+        productDescriptionTxt.setText("");
+        productPriceTxt.setText("");
+        brandNameTxt.setText("");
+        stockCodeTxt.setText("");
+    }
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {

@@ -1,9 +1,12 @@
 package com.blackseapps.interview.ui.fragment.listing;
 
+import android.annotation.SuppressLint;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.blackseapps.interview.R;
 import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.ui.base.BaseViewHolder;
+import com.blackseapps.interview.utils.CommonUtils;
 
 import java.util.Collections;
 import java.util.List;
@@ -110,6 +114,10 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         @BindView(R.id.productItemPriceTxt)
         TextView productItemPriceTxt;
 
+        @BindView(R.id.productImage)
+        ImageView productImage;
+
+
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -122,23 +130,26 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             productItemPriceTxt.setText("");
         }
 
+        @SuppressLint("SetTextI18n")
         public void onBind(int position) {
             super.onBind(position);
 
             final Product product = productList.get(position);
 
 
+            productImage.setImageDrawable(CommonUtils.getRandomImageData(itemView.getContext()));
+
             if (product.getTitle() != null) {
                 productItemTitleTxt.setText(product.getTitle());
             }
 
             if (product.getStockTotal() != 0) {
-                productItemStockTotalTxt.setText(String.valueOf(product.getStockTotal()));
+                productItemStockTotalTxt.setText(product.getStockTotal() + " " + itemView.getResources().getString(R.string.stock_total_number_text));
             } else
                 productItemStockTotalTxt.setText(R.string.listing_adapter_stock_total);
 
             if (product.getPrice() != 0) {
-                productItemPriceTxt.setText(String.valueOf(product.getPrice()));
+                productItemPriceTxt.setText(product.getPrice() + " " + itemView.getResources().getString(R.string.unit_tl));
             }
 
             itemView.setOnClickListener(view -> {

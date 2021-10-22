@@ -2,6 +2,7 @@ package com.blackseapps.interview.ui.base;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
@@ -119,6 +120,8 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
     public void setUnBinder(Unbinder unBinder) {
         mUnBinder = unBinder;
     }
+
+
 
     public interface Callback {
 
