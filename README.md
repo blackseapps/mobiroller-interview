@@ -17,3 +17,5 @@ Diğer Bağımlılıklar
 * butterknife
 
 Not: Firebase Realtime Database deneyimim çok yoktur, tutorial a sabit kalınmıştır.
+
+Sonradan aklıma geldiği için kendime Feedback bırakabilirim. Bottom navigation kullanmadan, mainActivity e FloatingButton koyularak daha sade ve hoş bir UX sağlanabilirdi. Maalesef sonradan aklıma geldi. Onu da belirtmek istedim.
