@@ -10,6 +10,8 @@ Proje 3 screenden oluşmaktadır. Kayıt, Listeme&Siralama ve Detay screenleridi
 
 * Projede kullanılan Design Patternlar, dependency injection (Dagger 2 ile kullanıldı) ve onunla birlikte Singleton pattern da bulunmaktadır. 
 
+* Firebase üzerinde order by function için descending olmadığı için reverse function kullanıldı.
+
 Diğer Bağımlılıklar
 
 * butterknife
