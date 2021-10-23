@@ -32,7 +32,6 @@ import java.util.ArrayList;
 
 import dagger.Module;
 import dagger.Provides;
-import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * Created by mertKaradeniz on 17.10.2021
@@ -86,12 +85,6 @@ public class ActivityModule {
             MainPresenter<MainMvpView> presenter) {
         return presenter;
     }
-
-    @Provides
-    CompositeDisposable provideCompositeDisposable() {
-        return new CompositeDisposable();
-    }
-
 
     @Provides
     ListingAdapter provideAddingAdapter() {

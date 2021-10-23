@@ -7,7 +7,6 @@ import com.google.firebase.database.Query;
 
 import javax.inject.Inject;
 
-import io.reactivex.Single;
 
 /**
  * Created by mertKaradeniz on 19.10.2021
@@ -30,7 +29,7 @@ public class AppDataManager implements DataManager {
     }
 
     @Override
-    public Single<Product> setProductApiCall(Product product) {
+    public Product setProductApiCall(Product product) {
         return mApiHelper.setProductApiCall(product);
     }
 
