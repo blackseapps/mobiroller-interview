@@ -4,7 +4,6 @@ import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 
-import io.reactivex.Single;
 
 /**
  * Created by mertKaradeniz on 19.10.2021
@@ -16,7 +15,7 @@ public interface ApiHelper {
 
     DatabaseReference getProductApiCall();
 
-    Single<Product> setProductApiCall(Product product);
+    Product setProductApiCall(Product product);
 
     Query getSortByNameIncreasingApiCall();
 

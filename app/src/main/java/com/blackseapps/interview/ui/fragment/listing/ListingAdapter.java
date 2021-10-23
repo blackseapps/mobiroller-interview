@@ -168,6 +168,9 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         @BindView(R.id.emptySubtitle)
         TextView emptySubtitle;
 
+        @BindView(R.id.btnRetry)
+        Button btnRetry;
+
         public EmptyViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -183,9 +186,9 @@ public class ListingAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             super.onBind(position);
 
             emptyTitle.setVisibility(View.VISIBLE);
-
             emptySubtitle.setVisibility(View.VISIBLE);
 
+            btnRetry.setOnClickListener(view -> mCallback.onRetryClick());
         }
     }
 }

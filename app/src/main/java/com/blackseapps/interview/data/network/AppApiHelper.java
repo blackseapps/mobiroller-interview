@@ -9,8 +9,6 @@ import com.google.firebase.database.Query;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import io.reactivex.Single;
-
 /**
  * Created by mertKaradeniz on 19.10.2021
  * <p>
@@ -36,7 +34,7 @@ public class AppApiHelper implements ApiHelper {
     }
 
     @Override
-    public Single<Product> setProductApiCall(Product product) {
+    public Product setProductApiCall(Product product) {
         DatabaseReference myRef = FirebaseDatabase.
                 getInstance(BuildConfig.BASE_URL).
                 getReference().
