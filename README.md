@@ -12,6 +12,8 @@ Proje 3 screenden oluşmaktadır. Kayıt, Listeme&Siralama ve Detay screenleridi
 
 * Firebase üzerinde order by function için descending olmadığı için reverse function kullanıldı.
 
+* Normalde Category i ayrı bir tip olarak tanımlamak istemiştim ama ekstra DML işlemleri olacağından ötürü süreç uzayabilirdi. O yüzden o kısmı static yaptım.
+
 Diğer Bağımlılıklar
 
 * butterknife
