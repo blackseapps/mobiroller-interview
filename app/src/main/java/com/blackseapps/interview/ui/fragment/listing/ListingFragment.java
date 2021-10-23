@@ -112,7 +112,7 @@ public class ListingFragment extends BaseFragment implements ListingMvpView, Lis
 
     @Override
     public void onRetryClick() {
-
+        mPresenter.requestProductList();
     }
 
     @Override

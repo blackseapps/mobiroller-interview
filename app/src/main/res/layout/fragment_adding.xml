@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/margin_60dp">
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,8 +15,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-
-            >
+            android:paddingBottom="@dimen/margin_60dp">
 
 
             <TextView
@@ -88,8 +86,8 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:digits="0123456789"
-                android:inputType="phone"
-                android:hint="@string/product_price_text" />
+                android:hint="@string/product_price_text"
+                android:inputType="phone" />
 
             <TextView
                 android:layout_width="@dimen/textview_width"
@@ -115,8 +113,8 @@
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
                 android:digits="0123456789"
-                android:inputType="phone"
-                android:hint="@string/stock_total_text" />
+                android:hint="@string/stock_total_text"
+                android:inputType="phone" />
 
             <TextView
                 android:layout_width="@dimen/textview_width"
@@ -128,8 +126,8 @@
                 android:id="@+id/productStatusTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:entries="@array/stockStatus"
-                android:layout_marginBottom="@dimen/margin_30dp"/>
+                android:layout_marginBottom="@dimen/margin_30dp"
+                android:entries="@array/stockStatus" />
 
 
         </LinearLayout>
