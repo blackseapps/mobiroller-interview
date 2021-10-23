@@ -9,4 +9,6 @@ import com.blackseapps.interview.ui.base.BaseMvpView;
  */
 
 public interface SplashMvpView extends BaseMvpView {
+
+    void openMainActivity();
 }

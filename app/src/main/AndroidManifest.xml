@@ -12,18 +12,20 @@
         android:theme="@style/Theme.MobirollerInterview">
 
         <activity
-            android:name=".ui.main.MainActivity"
-            android:label="@string/title_activity_main"
-            android:windowSoftInputMode="adjustPan">
+            android:name=".ui.activity.splash.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.details.DetailsActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustPan" />
 
-        <activity android:name=".ui.activity.splash.SplashActivity" />
+        <activity android:name=".ui.activity.details.DetailsActivity" />
 
         <activity
             android:name=".ui.activity.update.ProductUpdateActivity"

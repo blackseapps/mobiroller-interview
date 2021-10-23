@@ -11,6 +11,9 @@ import com.blackseapps.interview.di.PerActivity;
 import com.blackseapps.interview.ui.activity.details.DetailsMvpPresenter;
 import com.blackseapps.interview.ui.activity.details.DetailsMvpView;
 import com.blackseapps.interview.ui.activity.details.DetailsPresenter;
+import com.blackseapps.interview.ui.activity.splash.SplashMvpPresenter;
+import com.blackseapps.interview.ui.activity.splash.SplashMvpView;
+import com.blackseapps.interview.ui.activity.splash.SplashPresenter;
 import com.blackseapps.interview.ui.activity.update.ProductUpdateMvpPresenter;
 import com.blackseapps.interview.ui.activity.update.ProductUpdateMvpView;
 import com.blackseapps.interview.ui.activity.update.ProductUpdatePresenter;
@@ -111,6 +114,13 @@ public class ActivityModule {
     @PerActivity
     ProductUpdateMvpPresenter<ProductUpdateMvpView> provideProductUpdatePresenter(
             ProductUpdatePresenter<ProductUpdateMvpView> presenter) {
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    SplashMvpPresenter<SplashMvpView> provideSplashPresenter(
+            SplashPresenter<SplashMvpView> presenter) {
         return presenter;
     }
 }

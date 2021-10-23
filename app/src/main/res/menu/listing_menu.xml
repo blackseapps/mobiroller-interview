@@ -11,22 +11,18 @@
         <menu>
             <item
                 android:id="@+id/action_sorting_name_growing"
-                android:icon="@drawable/ic_baseline_sort_by_alpha_24"
                 android:title="@string/increasing_by_name" />
 
             <item
                 android:id="@+id/action_sorting_name_decreasing"
-                android:icon="@drawable/ic_baseline_sort_by_alpha_24"
                 android:title="@string/descending_by_name" />
 
             <item
                 android:id="@+id/action_sorting_price_growing"
-                android:icon="@drawable/ic_baseline_sort_by_alpha_24"
                 android:title="@string/increasing_by_price" />
 
             <item
                 android:id="@+id/action_sorting_price_decreasing"
-                android:icon="@drawable/ic_baseline_sort_by_alpha_24"
                 android:title="@string/descending_by_price" />
         </menu>
     </item>
