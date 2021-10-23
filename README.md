@@ -21,3 +21,10 @@ Diğer Bağımlılıklar
 Not: Firebase Realtime Database deneyimim çok yoktur, tutorial a sabit kalınmıştır.
 
 Sonradan aklıma geldiği için kendime Feedback bırakabilirim. Bottom navigation kullanmadan, mainActivity e FloatingButton koyularak daha sade ve hoş bir UX sağlanabilirdi. Maalesef sonradan aklıma geldi. Onu da belirtmek istedim.
+
+<p align="center">
+  <img src="https://github.com/blackseapps/mobiroller-interview/blob/master/screenshots/screenshot_01.jpeg" width="220">
+  <img src="https://github.com/blackseapps/mobiroller-interview/blob/master/screenshots/screenshot_02.jpeg" width="220">
+  <img src="https://github.com/blackseapps/mobiroller-interview/blob/master/screenshots/screenshot_03.jpeg" width="220">
+  <img src="https://github.com/blackseapps/mobiroller-interview/blob/master/screenshots/screenshot_04.jpeg" width="220">
+</p>
