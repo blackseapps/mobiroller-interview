@@ -9,5 +9,4 @@ package com.blackseapps.interview.ui.base;
 public interface DialogView extends BaseMvpView {
 
     void dismissDialog(String tag);
-
 }

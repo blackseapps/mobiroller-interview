@@ -1,6 +1,5 @@
 package com.blackseapps.interview.data.network;
 
-import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
@@ -17,11 +16,7 @@ public interface ApiHelper {
 
     DatabaseReference getProductApiCall();
 
-    DatabaseReference getCategoryApiCall();
-
     Single<Product> setProductApiCall(Product product);
-
-    Single<Category> setCategoryApiCall(Category category);
 
     Query getSortByNameIncreasingApiCall();
 

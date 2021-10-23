@@ -13,9 +13,6 @@ import com.blackseapps.interview.ui.base.BaseMvpPresenter;
 
 public interface AddingMvpPresenter<V extends AddingMvpView> extends BaseMvpPresenter<V> {
 
-    void onViewPrepared();
-
     void onClickSaveButton(Product product);
 
-    void  showCategoryAddingDialog(FragmentManager fragmentManager);
 }

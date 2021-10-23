@@ -38,15 +38,4 @@ public class BasePresenter<V extends BaseMvpView> implements BaseMvpPresenter<V>
         mMvpView = null;
     }
 
-    @Override
-    public void handleApiError(String error) {
-
-    }
-
-    @Override
-    public void setUserAsLoggedOut() {
-
-    }
-
-
 }

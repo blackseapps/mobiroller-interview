@@ -34,7 +34,6 @@ public class DetailsPresenter<V extends DetailsMvpView> extends BasePresenter<V>
     public void onHandleDeleteItem(String uId) {
         getMvpView().showLoading();
         Query query = getDataManager().deleteProductApiCall().equalTo(uId);
-        Log.i("a", "a");
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -42,7 +41,6 @@ public class DetailsPresenter<V extends DetailsMvpView> extends BasePresenter<V>
                 for (DataSnapshot appleSnapshot : snapshot.getChildren()) {
                     appleSnapshot.getRef().removeValue();
                     getMvpView().hideLoading();
-
                 }
             }
 
@@ -51,10 +49,5 @@ public class DetailsPresenter<V extends DetailsMvpView> extends BasePresenter<V>
                 getMvpView().hideLoading();
             }
         });
-    }
-
-    @Override
-    public void onHandleUpdateItem(String uId) {
-
     }
 }

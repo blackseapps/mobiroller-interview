@@ -9,4 +9,6 @@ import com.blackseapps.interview.ui.base.BaseMvpView;
  */
 
 public interface ProductUpdateMvpView extends BaseMvpView {
+
+    void  onHandleRequestFinally();
 }

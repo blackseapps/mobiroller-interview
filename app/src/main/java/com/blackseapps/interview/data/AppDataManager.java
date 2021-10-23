@@ -1,7 +1,6 @@
 package com.blackseapps.interview.data;
 
 import com.blackseapps.interview.data.network.ApiHelper;
-import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
@@ -25,25 +24,14 @@ public class AppDataManager implements DataManager {
         this.mApiHelper = mApiHelper;
     }
 
-
     @Override
     public DatabaseReference getProductApiCall() {
         return mApiHelper.getProductApiCall();
     }
 
     @Override
-    public DatabaseReference getCategoryApiCall() {
-        return mApiHelper.getCategoryApiCall();
-    }
-
-    @Override
     public Single<Product> setProductApiCall(Product product) {
         return mApiHelper.setProductApiCall(product);
-    }
-
-    @Override
-    public Single<Category> setCategoryApiCall(Category category) {
-        return mApiHelper.setCategoryApiCall(category);
     }
 
     @Override
