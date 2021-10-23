@@ -13,5 +13,4 @@ public interface DetailsMvpPresenter<V extends DetailsMvpView> extends BaseMvpPr
 
     void onHandleDeleteItem(String uId);
 
-    void onHandleUpdateItem(String uId);
 }

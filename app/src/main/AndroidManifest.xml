@@ -13,7 +13,8 @@
 
         <activity
             android:name=".ui.main.MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,7 +25,9 @@
 
         <activity android:name=".ui.activity.splash.SplashActivity" />
 
-        <activity android:name=".ui.activity.update.ProductUpdateActivity"/>
+        <activity
+            android:name=".ui.activity.update.ProductUpdateActivity"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

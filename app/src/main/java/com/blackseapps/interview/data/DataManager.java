@@ -11,5 +11,4 @@ import com.blackseapps.interview.data.network.ApiHelper;
 
 public interface DataManager extends ApiHelper {
 
-
 }

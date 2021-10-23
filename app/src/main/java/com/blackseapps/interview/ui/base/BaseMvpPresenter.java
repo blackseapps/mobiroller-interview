@@ -6,7 +6,4 @@ public interface BaseMvpPresenter<V extends BaseMvpView> {
 
     void onDetach();
 
-    void handleApiError(String error);
-
-    void setUserAsLoggedOut();
 }

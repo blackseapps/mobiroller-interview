@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_60dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,32 +15,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
 
+            >
+
+
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/spinner_category" />
 
             <Spinner
                 android:id="@+id/productCategoryTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:prompt="@string/spinner_category"
+
+                android:entries="@array/category_array"
                 android:spinnerMode="dialog"
                 tools:ignore="HardcodedText" />
 
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/product_title_text" />
 
             <EditText
                 android:id="@+id/productTitleTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
                 android:hint="@string/product_title_text" />
 
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/product_description_text" />
 
             <EditText
                 android:id="@+id/productDescriptionTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="170dp"
-                android:layout_marginTop="@dimen/margin_10dp"
                 android:gravity="top|start"
                 android:hint="@string/product_description_text"
                 android:inputType="textMultiLine"
@@ -48,43 +65,71 @@
                 android:minLines="6"
                 android:scrollbars="vertical" />
 
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/brand_name_text" />
 
             <EditText
                 android:id="@+id/brandNameTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
                 android:hint="@string/brand_name_text" />
 
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/product_price_text" />
 
             <EditText
                 android:id="@+id/productPriceTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
+                android:digits="0123456789"
+                android:inputType="phone"
                 android:hint="@string/product_price_text" />
+
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/stock_code_text" />
 
             <EditText
                 android:id="@+id/stockCodeTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
                 android:hint="@string/stock_code_text" />
 
+
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/stock_total_text" />
 
             <EditText
                 android:id="@+id/stockTotalTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
+                android:digits="0123456789"
+                android:inputType="phone"
                 android:hint="@string/stock_total_text" />
+
+            <TextView
+                android:layout_width="@dimen/textview_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/stock_status_text" />
 
             <Spinner
                 android:id="@+id/productStatusTxt"
                 android:layout_width="@dimen/textview_width"
                 android:layout_height="@dimen/textview_height"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:entries="@array/stockStatus" />
+                android:entries="@array/stockStatus"
+                android:layout_marginBottom="@dimen/margin_30dp"/>
 
 
         </LinearLayout>

@@ -11,7 +11,7 @@
     <string name="product_button_delete">Delete</string>
     <string name="product_button_update">Update</string>
     <string name="stock_code_text">Stock Code</string>
-    <string name="spinner_category">Please, select a category</string>
+    <string name="spinner_category">Select a Category</string>
 
     <!-- Bottom Navigation -->
     <string name="title_home">Products</string>
@@ -45,10 +45,23 @@
 
     <string name="unit_tl">₺</string>
     <string name="stock_total_number_text">total</string>
+    <string name="stock_status_text">Stock Status</string>
 
     <!-- Spinner Stock Status Array -->
     <string-array name="stockStatus">
         <item>Yes</item>
         <item>No</item>
+    </string-array>
+
+
+    <string-array name="category_array">
+        <item>Water</item>
+        <item>Snack</item>
+        <item>Ice cream</item>
+        <item>Beverage</item>
+        <item>Milk and Breakfast</item>
+        <item>Fruit and Vegetables</item>
+        <item>Instant foods</item>
+        <item>Basic food</item>
     </string-array>
 </resources>

@@ -121,8 +121,6 @@ public abstract class BaseFragment extends Fragment implements BaseMvpView{
         mUnBinder = unBinder;
     }
 
-
-
     public interface Callback {
 
         void onFragmentAttached();

@@ -13,6 +13,4 @@ public final class ApiEndPoint {
 
     public static final String ENDPOINT_PRODUCT = "product";
 
-    public static final String ENDPOINT_CATEGORY = "category";
-
 }

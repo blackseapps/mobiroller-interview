@@ -18,7 +18,6 @@ import androidx.core.content.ContextCompat;
 import com.blackseapps.interview.MainApplication;
 
 import com.blackseapps.interview.R;
-import com.blackseapps.interview.data.network.model.Product;
 import com.blackseapps.interview.di.component.ActivityComponent;
 import com.blackseapps.interview.di.component.DaggerActivityComponent;
 import com.blackseapps.interview.di.module.ActivityModule;

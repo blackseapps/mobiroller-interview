@@ -75,7 +75,6 @@ public class DetailsActivity extends BaseActivity implements DetailsMvpView {
         setUp();
     }
 
-
     @SuppressLint("SetTextI18n")
     @Override
     protected void setUp() {
@@ -121,6 +120,4 @@ public class DetailsActivity extends BaseActivity implements DetailsMvpView {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

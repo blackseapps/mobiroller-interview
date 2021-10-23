@@ -1,7 +1,6 @@
 package com.blackseapps.interview.data.network;
 
 import com.blackseapps.interview.BuildConfig;
-import com.blackseapps.interview.data.network.model.Category;
 import com.blackseapps.interview.data.network.model.Product;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -37,15 +36,6 @@ public class AppApiHelper implements ApiHelper {
     }
 
     @Override
-    public DatabaseReference getCategoryApiCall() {
-        return FirebaseDatabase.
-                getInstance(BuildConfig.BASE_URL).
-                getReference().
-                getDatabase().
-                getReference(ApiEndPoint.ENDPOINT_PRODUCT);
-    }
-
-    @Override
     public Single<Product> setProductApiCall(Product product) {
         DatabaseReference myRef = FirebaseDatabase.
                 getInstance(BuildConfig.BASE_URL).
@@ -55,17 +45,6 @@ public class AppApiHelper implements ApiHelper {
         myRef = myRef.push();
         product.setKey(myRef.getKey());
         myRef.setValue(product);
-        return null;
-    }
-
-    @Override
-    public Single<Category> setCategoryApiCall(Category category) {
-        DatabaseReference myRef = FirebaseDatabase.
-                getInstance(BuildConfig.BASE_URL).
-                getReference().
-                getDatabase().
-                getReference(ApiEndPoint.ENDPOINT_CATEGORY);
-        myRef.push().setValue(category);
         return null;
     }
 

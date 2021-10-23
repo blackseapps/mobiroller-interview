@@ -96,8 +96,8 @@ public class ProductUpdateActivity extends BaseActivity implements ProductUpdate
         productPriceTxt.setText(String.valueOf(data.getPrice()));
         brandNameTxt.setText(data.getBrandName());
         stockCodeTxt.setText(data.getStockCode());
-
-        // productCategoryTxt.setText(data.getCategoryName());
+        stockTotalTxt.setText(String.valueOf(data.getStockTotal()));
+         productCategoryTxt.setSelection(data.getCategoryUid());
     }
 
     @Override
@@ -141,7 +141,7 @@ public class ProductUpdateActivity extends BaseActivity implements ProductUpdate
         product.setKey(data.getKey());
         product.setTitle(productTitleTxt.getText().toString());
         product.setDescription(productDescriptionTxt.getText().toString());
-        product.setCategoryUid(1);
+        product.setCategoryUid(productCategoryTxt.getSelectedItemPosition());
         product.setCategoryName(CategoryTxt);
         product.setPrice(price);
         product.setBrandName(brandNameTxt.getText().toString());
@@ -150,6 +150,11 @@ public class ProductUpdateActivity extends BaseActivity implements ProductUpdate
         product.setStockStatus(productStatus);
 
         mPresenter.onClickUpdateButton(product);
+
+    }
+
+    @Override
+    public void onHandleRequestFinally() {
         finish();
     }
 
