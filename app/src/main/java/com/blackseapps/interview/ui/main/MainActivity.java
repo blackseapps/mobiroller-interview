@@ -1,6 +1,8 @@
 package com.blackseapps.interview.ui.main;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -29,6 +31,11 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
     @BindView(R.id.nav_view)
     BottomNavigationView mNavigationView;
+
+    public static Intent getStartIntent(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

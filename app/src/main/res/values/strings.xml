@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobirollerInterview</string>
+    <string name="app_name">sanaBi</string>
 
     <!-- In App Texts -->
     <string name="product_button_text">Kaydet</string>
@@ -12,6 +12,19 @@
     <string name="product_button_update">Update</string>
     <string name="stock_code_text">Stock Code</string>
     <string name="spinner_category">Select a Category</string>
+    <string name="dialog_category_text">Please, enter a category</string>
+    <string name="listing_menu_sorting_text">Sorting</string>
+    <string name="increasing_by_name">Increasing by Name</string>
+    <string name="descending_by_name">Descending by Name</string>
+    <string name="increasing_by_price">Increasing by Price</string>
+    <string name="descending_by_price">Descending by Price</string>
+    <string name="update_text">Update</string>
+    <string name="delete_item_text">Delete Item</string>
+    <string name="details_category_text">Category</string>
+
+    <string name="unit_tl">₺</string>
+    <string name="stock_total_number_text">total</string>
+    <string name="stock_status_text">Stock Status</string>
 
     <!-- Bottom Navigation -->
     <string name="title_home">Products</string>
@@ -32,20 +45,6 @@
     <string name="adding_empty_price">Please, enter a price.</string>
     <string name="adding_empty_stock_code">Please, enter a stock code.</string>
     <string name="adding_empty_stock_total">Please, enter a stock total.</string>
-    <string name="dialog_category_text">Please, enter a category</string>
-    <string name="listing_menu_sorting_text">Sorting</string>
-    <string name="increasing_by_name">Increasing by Name</string>
-    <string name="descending_by_name">Descending by Name</string>
-    <string name="increasing_by_price">Increasing by Price</string>
-    <string name="descending_by_price">Descending by Price</string>
-    <string name="update_text">Update</string>
-    <string name="delete_item_text">Delete Item</string>
-    <string name="details_category_text">Category</string>
-
-
-    <string name="unit_tl">₺</string>
-    <string name="stock_total_number_text">total</string>
-    <string name="stock_status_text">Stock Status</string>
 
     <!-- Spinner Stock Status Array -->
     <string-array name="stockStatus">
@@ -53,7 +52,7 @@
         <item>No</item>
     </string-array>
 
-
+    <!-- Category Array -->
     <string-array name="category_array">
         <item>Water</item>
         <item>Snack</item>
