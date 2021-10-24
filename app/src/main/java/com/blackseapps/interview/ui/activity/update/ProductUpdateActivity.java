@@ -97,7 +97,9 @@ public class ProductUpdateActivity extends BaseActivity implements ProductUpdate
         brandNameTxt.setText(data.getBrandName());
         stockCodeTxt.setText(data.getStockCode());
         stockTotalTxt.setText(String.valueOf(data.getStockTotal()));
-         productCategoryTxt.setSelection(data.getCategoryUid());
+        productCategoryTxt.setSelection(data.getCategoryUid());
+        productStatusTxt.setSelection(data.isStockStatus() == 0 ? 1 : 0);
+
     }
 
     @Override
